@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/myslide.css" />
+  </head>
+  <body>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <div class="header">
+          <p>Skip</p>
+        </div>
+        <div class="centerimg">
+          <img src="img/pana.png" />
+        </div>
+        <div class="content">
+          <p>Trade with Local Currency</p>
+        </div>
+        <div class="timeset">
+          <p>
+            Buy and sell crypto in your preferred local<br />
+            currency without the help of a third party
+          </p>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <!-- <div class="numbertext">2/ 3</div> -->
+        <div class="header">
+          <h>Skip</h>
+        </div>
+        <div class="centerimg">
+          <img src="img/bro.png" />
+        </div>
+        <div class="content">
+          <p>Learn Cryptocurrency</p>
+        </div>
+        <div class="timeset">
+          <p>
+            Get free access to an archive of articles to <br />help you make
+            informed decision on trade
+          </p>
+        </div>
+      </div>
+
+      <div class="mySlides">
+        <!-- <div class="numbertext">3/ 3</div> -->
+        <div class="centerimg">
+          <img src="img/rafiki.png" />
+        </div>
+        <div class="content">
+          <p>Stay Secure</p>
+        </div>
+        <div class="timeset">
+          <p>
+            Stay secure with your wallet and Enjoy<br />
+            24hrs customer support from our team
+          </p>
+        </div>
+        <div class="primarybtn">
+          <button><a href="signup.html"></a>SIGN UP</button>
+        </div>
+        <div class="primarybtn2">
+          <button><a href="signin.html"></a>SIGN IN</button>
+        </div>
+      </div>
+
+      <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+    </div>
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlides(1)"></span>
+    
+    
+      <span class="dot" onclick="currentSlides(2)"></span>
+   
+      <span class="dot" onclick="currentSlides(3)"></span>
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 2;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+    </script>
+  </body>
+</html>
